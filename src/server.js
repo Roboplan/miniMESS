@@ -1,6 +1,14 @@
 //var http = require("http");
 const jsonServer = require("json-server");
 
+const dataFolder = './components/';
+const fs = require('fs');
+const path = require('path');
+
+const walkDirSync = (d) => fs.statSync(d).isDirectory() ? fs.readdirSync(d).map(f => walkDirSync(path.join(d, f))) : d;
+
+console.log(walkDirSync(dataFolder));
+
 const server = jsonServer.create();
 const router = jsonServer.router("./src/db.json");
 const middlewares = jsonServer.defaults();
