@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const NodemonPlugin = require( 'nodemon-webpack-plugin' )
 
 module.exports = {
+  mode: "development",
   entry: "./src/client.js",
   devtool: 'source-map',
   module: {
@@ -23,7 +24,7 @@ module.exports = {
   },
   plugins: [
     new NodemonPlugin({
-      watch: "./src",
+      watch: ["server.js", "./src", "./api"],
       script: './server.js',
       ext: 'js,njk,json'
     }),

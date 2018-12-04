@@ -2,7 +2,6 @@
 module.exports = function(app) {
   var parts = require('../controllers/partsController');
 
-  // todoList Routes
   app.route('/parts')
     .get(parts.list_all_parts)
     .post(parts.create_a_part);

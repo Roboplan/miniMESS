@@ -27,7 +27,7 @@ export default class PartsList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="container">
         <h2>Parts</h2>
         <br />
         <ul>
