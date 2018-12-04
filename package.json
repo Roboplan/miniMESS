@@ -1,7 +1,7 @@
 {
-  "name": "node-sandbox",
+  "name": "circuito-editor",
   "version": "1.0.0",
-  "description": "Simple Node Sandbox",
+  "description": "circuito.io Component Editor",
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack --config ./webpack.config.js --watch"
