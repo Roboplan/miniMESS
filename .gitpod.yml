@@ -2,5 +2,5 @@ ports:
   - port: 8080
     onOpen: open-preview
 tasks:
-  - command: npm i
-  - command: npm start
+  - command: npm i; npm start
+
